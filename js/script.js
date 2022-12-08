@@ -89,6 +89,7 @@ function Validate(){
     }
     else{
         setSuccessMsg(cpassword);
+          window.location.href="successfully.html";
     }
     SuccessMsg(usernameVal);
 
@@ -105,5 +106,5 @@ function setErrorMsg(input, errormsgs){
 function setSuccessMsg(input){
     const formControl = input.parentElement;
     formControl.className = "form-control success";
-    window.location.href="successfully.html";
+  
 }
