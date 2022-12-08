@@ -89,11 +89,11 @@ function Validate(){
     }
     else{
         setSuccessMsg(cpassword);
-          window.location.href="successfully.html";
+        window.location.href="successfully.html";
+      
     }
     SuccessMsg(usernameVal);
-
-
+ 
 }
 
 function setErrorMsg(input, errormsgs){
@@ -108,3 +108,30 @@ function setSuccessMsg(input){
     formControl.className = "form-control success";
   
 }
+
+form.addEventListener('submit', (e) =>{
+    e.preventDefault();
+    const username = document.getElementById('username').value;
+const email = document.getElementById('email').value;
+const password = document.getElementById('password').value;
+const cpassword = document.getElementById('cpassword').value;
+fetch("https://jsonplaceholder.typicode.com/posts", {
+    method: 'POST',
+    body: JSON.stringify({
+        username: username,
+        email: email,
+        password: password,
+        cpassword:cpassword
+    }),
+    headers: {
+        "Content-Type": "application/json;charset=UTF-8"
+    }
+})
+.then((response) => {
+        return response.json()
+})
+.then((data) => {
+    console.log(data)
+})
+
+})
