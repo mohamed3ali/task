@@ -66,9 +66,7 @@ padding: 10px;
     padding: 10px;
     text-align: center;
 }
-.head-img {
 
-}
 .head-img img
 {
     width: 100%;
@@ -102,9 +100,11 @@ height: 70vh;
     margin-bottom: 30px;
     position: relative;
 }
-
+.form-control img{
+    width: 10%;
+}
 .form-control input{
-    width: 100%;
+    width: 90%;
     border: 2px solid #f0f0f0;
     font-size: 14px;
     border-radius: 5px;
@@ -125,10 +125,12 @@ height: 70vh;
     border-color: #df3434;
 }
 
+
 .form-control i {
     position: absolute;
     right: 12px;
     top: 40px;
+    text-align: center;
     visibility: hidden;
 }
 
